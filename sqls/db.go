@@ -2,6 +2,7 @@ package sqls
 
 import (
 	"database/sql"
+	"time"
 
 	log "github.com/sirupsen/logrus"
 	"gorm.io/driver/mysql"
@@ -18,7 +19,7 @@ var (
 	sqlDB *sql.DB
 )
 
-func Open(dsn string, config *gorm.Config, maxIdleConns, maxOpenConns int, models ...interface{}) (err error) {
+func Open(dsn string, config *gorm.Config, maxIdleConns, maxOpenConns int, maxLifetime time.Duration, models ...interface{}) (err error) {
 	if config == nil {
 		config = &gorm.Config{}
 	}
@@ -38,6 +39,7 @@ func Open(dsn string, config *gorm.Config, maxIdleConns, maxOpenConns int, model
 	if sqlDB, err = db.DB(); err == nil {
 		sqlDB.SetMaxIdleConns(maxIdleConns)
 		sqlDB.SetMaxOpenConns(maxOpenConns)
+		sqlDB.SetConnMaxLifetime(maxLifetime)
 	} else {
 		log.Error(err)
 	}
