@@ -1,9 +1,9 @@
 package params
 
 import (
+	"github.com/gannicus-w/yq_mysql/common/strs/strcase"
+	"github.com/gannicus-w/yq_mysql/sqls"
 	"github.com/kataras/iris/v12"
-	"github.com/mlogclub/simple/common/strs/strcase"
-	"github.com/mlogclub/simple/sqls"
 )
 
 type QueryParams struct {

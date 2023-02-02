@@ -3,7 +3,7 @@ package structs
 import (
 	"errors"
 	"fmt"
-	"github.com/mlogclub/simple/common/arrays"
+	"github.com/gannicus-w/yq_mysql/common/arrays"
 	"log"
 	"reflect"
 )

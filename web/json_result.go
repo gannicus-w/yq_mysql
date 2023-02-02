@@ -1,8 +1,8 @@
 package web
 
 import (
-	"github.com/mlogclub/simple/common/structs"
-	"github.com/mlogclub/simple/sqls"
+	"github.com/gannicus-w/yq_mysql/common/structs"
+	"github.com/gannicus-w/yq_mysql/sqls"
 )
 
 type JsonResult struct {
