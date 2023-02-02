@@ -1,6 +1,6 @@
-module github.com/mlogclub/simple
+module github.com/gannicus-w/yq_mysql
 
-go 1.19
+go 1.18
 
 require (
 	github.com/iris-contrib/go.uuid v2.0.0+incompatible
